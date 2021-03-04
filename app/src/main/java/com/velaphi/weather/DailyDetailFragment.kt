@@ -14,7 +14,6 @@ class DailyDetailFragment : Fragment() {
 
     private lateinit var dataBinding: FragmentOneDayDetailBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

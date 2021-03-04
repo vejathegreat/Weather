@@ -1,9 +1,7 @@
 package com.velaphi.weather.api
 
-import com.velaphi.weather.model.DailyForecastResponse
 import com.velaphi.weather.model.ForecastResponse
 import com.velaphi.weather.model.WeatherResponse
-import com.velaphi.weather.util.Constant
 import io.reactivex.Single
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -12,8 +10,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class WeatherAPIClient {
 
+    companion object{
+        const val  BASE_URL = "https://api.openweathermap.org/data/2.5/"
+    }
+
     private val api = Retrofit.Builder()
-        .baseUrl(Constant.BASE_URL)
+        .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .client(getOkHttpClient())

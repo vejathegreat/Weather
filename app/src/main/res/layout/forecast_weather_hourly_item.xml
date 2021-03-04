@@ -60,8 +60,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/half_margin"
                 android:textStyle="bold"
-                android:layout_marginTop="@dimen/small_margin"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imgage_forecast_item"
                 app:layout_constraintHorizontal_bias="0.428"
                 app:layout_constraintStart_toStartOf="@+id/imgage_forecast_item"

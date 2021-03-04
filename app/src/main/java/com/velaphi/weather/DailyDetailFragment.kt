@@ -26,7 +26,4 @@ class DailyDetailFragment : Fragment() {
         dataBinding.detail = cityDailyResponse
         return dataBinding.root
     }
-
-
-
 }

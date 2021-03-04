@@ -12,6 +12,10 @@ Setup:
 
 - Insert Api key to local.properties for the API to work correctly.
 
+TODO
+- Convert recyclerview items to a customView/ Custom widget
+- Implement Dagger Hilt
+
 Download:
 
 You can download the Android Apk on this link: https://www.dropbox.com/s/f52q2qju3xmc73c/weatherAPP.apk?dl=0

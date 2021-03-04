@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu_location_text">Location</string>
+    <string name="menu_one_day_text">One Day</string>
+    <string name="menu_five_days_text">Five Days</string>
+
+    <string name="text_pressure">Pressure</string>
+    <string name="text_wind">Wind</string>
+    <string name="text_sunrise">Sunrise</string>
+    <string name="text_humidity">Humidity</string>
+    <string name="text_visibility">Visibility</string>
+    <string name="text_sunset">Sunset</string>
+
+    <string name="location_not_granted">We need your current location for the app to function properly.</string>
+    <string name="c">°C</string>
+    <string name="city_weather_detail">cityWeatherDetail</string>
+    <string name="weather">WEATHER</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="feels">FEELS</string>
+    <string name="percent">%</string>
+    <string name="pressure">PRESSURE</string>
+    <string name="wind">WIND</string>
+    <string name="kmh">KmH</string>
+    <string name="degree">°</string>
+
+
+</resources>

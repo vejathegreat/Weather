@@ -18,6 +18,8 @@ You can download the Android Apk on this link: https://www.dropbox.com/s/f52q2qj
 
 
 
+
+
 ![device-2021-03-04-160617](https://user-images.githubusercontent.com/70628032/109976734-c85fe100-7d04-11eb-9abc-20ff395804c1.png)
 
 

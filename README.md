@@ -3,7 +3,7 @@
 - Api: OpenWeatherMap
 - Language: Kotlin
 
-Device:
+Device requirements:
 
 - Location access
 - Internet Access

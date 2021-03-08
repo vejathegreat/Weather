@@ -23,8 +23,6 @@ import kotlinx.android.synthetic.main.fragment_location.*
 
 class LocationFragment : Fragment() {
 
-    private val REQUEST_CODE = 1
-
     private lateinit var viewModel: LocationViewModel
     private lateinit var dataBinding: FragmentLocationBinding
 
@@ -74,13 +72,13 @@ class LocationFragment : Fragment() {
 
         viewModel.locationData.observe(viewLifecycleOwner, Observer { locationGps ->
             locationGps?.let {
-                lytLocation.visibility = View.VISIBLE
+                forcast_container.visibility = View.VISIBLE
                 dataBinding.locationGPS = locationGps
                 dataBinding.textViewTemperature.text = locationGps.main!!.temp.toInt().toString()
                 dataBinding.textViewDate.text = dateConverter()
                 dataBinding.textViewSunrise.text = timeConverter((locationGps.sys!!.sunrise).toLong())
                 dataBinding.textViewSunset.text = timeConverter((locationGps.sys!!.sunset).toLong())
-                dataBinding.imageState.setImageResource(resources.getIdentifier("ic_"+locationGps.weather?.get(0)?.icon, "drawable", view.context.packageName))
+                dataBinding.imageState.setImageResource(resources.getIdentifier(DRAWABLE_PREFIX + locationGps.weather?.get(0)?.icon, DRAWABLE_DEF_TYPE, view.context.packageName))
 
             }
         })
@@ -89,7 +87,7 @@ class LocationFragment : Fragment() {
             loading?.let {
                 if (it){
                     location_loading.visibility = View.VISIBLE
-                    lytLocation.visibility = View.GONE
+                    forcast_container.visibility = View.GONE
                 }else{
                     location_loading.visibility = View.GONE
                 }
@@ -115,4 +113,11 @@ class LocationFragment : Fragment() {
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
+
+    companion object{
+        const val REQUEST_CODE = 1
+        const val DRAWABLE_DEF_TYPE = "drawable"
+        const val DRAWABLE_PREFIX = "ic_"
+    }
+
 }

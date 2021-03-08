@@ -14,6 +14,7 @@
     <string name="text_humidity">Humidity</string>
     <string name="text_visibility">Visibility</string>
     <string name="text_sunset">Sunset</string>
+    <string name="text_cities">Select one of the cities for more weather information.</string>
 
     <string name="location_not_granted">We need your current location for the app to function properly.</string>
     <string name="c">°C</string>
@@ -27,5 +28,35 @@
     <string name="kmh">KmH</string>
     <string name="degree">°</string>
 
+    <string-array name="city_name">
+        <item>Lisbon</item>
+        <item>Madrid</item>
+        <item>Paris</item>
+        <item>Berlin</item>
+        <item>Copenhagen</item>
+        <item>Rome</item>
+        <item>London</item>
+        <item>Dublin</item>
+        <item>Prague</item>
+        <item>Viana</item>
+    </string-array>
 
+    <integer-array name="city_background">
+        <item>@drawable/lisbon</item>
+        <item>@drawable/madrid</item>
+        <item>@drawable/paris</item>
+        <item>@drawable/berlin</item>
+        <item>@drawable/copenhagen</item>
+        <item>@drawable/rome</item>
+        <item>@drawable/london</item>
+        <item>@drawable/dublin</item>
+        <item>@drawable/prague</item>
+        <item>@drawable/viana</item>
+    </integer-array>
+    <string name="title_activity_city_weather_details">CityWeatherDetailsActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

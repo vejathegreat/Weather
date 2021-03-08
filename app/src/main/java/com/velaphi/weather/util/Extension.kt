@@ -1,11 +1,14 @@
 package com.velaphi.weather.util
 
+import android.content.Context
+import android.content.res.TypedArray
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.velaphi.weather.R
+import com.velaphi.weather.model.CityModel
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -83,4 +86,17 @@ fun setImageResource(imageview: ImageView, url:String){
 
 private fun ImageView.setImageDrawable(view:ImageView,image: Int) {
         Glide.with(context).load(image).into(view)
+}
+
+fun getCitiesList(context: Context): List<CityModel> {
+
+    val cityList: MutableList<CityModel> = mutableListOf()
+    val citiesNamesList = context.resources.getStringArray(R.array.city_name)
+    val images: TypedArray = context.resources.obtainTypedArray(R.array.city_background)
+
+    for (i in citiesNamesList.indices){
+        cityList.add(CityModel(citiesNamesList[i], images.getResourceId(i, -1)))
+    }
+    images.recycle()
+    return cityList
 }

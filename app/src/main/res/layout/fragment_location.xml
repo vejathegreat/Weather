@@ -15,7 +15,7 @@
         tools:context=".LocationFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/lytLocation"
+            android:id="@+id/forcast_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             layoutBackgroundImage="@{locationGPS.weather.get(0).icon}">

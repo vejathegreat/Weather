@@ -9,8 +9,8 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/fiveDaysFragment"
-        android:icon="@drawable/ic_five_days"
+        android:id="@+id/otherCitiesFragment"
+        android:icon="@drawable/ic_city"
         android:title="@string/menu_five_days_text"
         app:showAsAction="always" />
 </menu>

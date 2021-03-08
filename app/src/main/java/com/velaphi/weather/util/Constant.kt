@@ -1,5 +1,5 @@
 package com.velaphi.weather.util
 
 object Constant {
-    val METRIC = "metric"
+    const val METRIC = "metric"
 }

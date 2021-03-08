@@ -6,6 +6,7 @@ import android.view.WindowManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.velaphi.weather.util.IOnBackPressed
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var navController = findNavController(R.id.fragment)
+        val navController = findNavController(R.id.fragment)
         bottomNavigationView.setupWithNavController(navController)
 
     }

@@ -3,6 +3,7 @@ package com.velaphi.weather.api
 import com.velaphi.weather.model.ForecastResponse
 import com.velaphi.weather.model.WeatherResponse
 import io.reactivex.Single
+import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -29,6 +30,14 @@ class WeatherAPIClient {
     ): Single<WeatherResponse> {
         return api.getWeatherByGPS(latitude, longitude, units)
     }
+
+    fun getDataUsingCityName(
+        cityName: String,
+        units: String
+    ): Single<WeatherResponse> {
+        return api.getWeatherCityName(cityName, units)
+    }
+
 
     fun getForecastFromGps(
         latitude: String,
